@@ -14,12 +14,12 @@ console.log('--- PASO 1: Parámetros Tipados ---');
 // IMPACTO: TypeScript valida que ambos sean números
 
 // Descomenta las siguientes líneas:
-// const add = (a: number, b: number) => {
-//   return a + b;
-// };
+const add = (a: number, b: number) => {
+return a + b;
+};
 
-// console.log('2 + 3 =', add(2, 3));
-// console.log('10 + 25 =', add(10, 25));
+console.log('2 + 3 =', add(2, 3));
+console.log('10 + 25 =', add(10, 25));
 
 console.log('');
 
@@ -33,12 +33,12 @@ console.log('--- PASO 2: Tipo de Retorno ---');
 // IMPACTO: si intentas retornar otro tipo, TypeScript alerta
 
 // Descomenta las siguientes líneas:
-// const greet = (name: string): string => {
-//   return `Hola, ${name}!`;
-// };
+const greet = (name: string): string => {
+return `Hola, ${name}!`;
+};
 
-// console.log(greet('Ana'));
-// console.log(greet('Carlos'));
+console.log(greet('Ana'));
+console.log(greet('Carlos'));
 
 console.log('');
 
@@ -52,12 +52,12 @@ console.log('--- PASO 3: Parámetros Opcionales ---');
 // IMPACTO: lastName puede no pasarse, sin error
 
 // Descomenta las siguientes líneas:
-// const formatName = (firstName: string, lastName?: string): string => {
-//   return lastName ? `${firstName} ${lastName}` : firstName;
-// };
+const formatName = (firstName: string, lastName?: string): string => {
+return lastName ? `${firstName} ${lastName}` : firstName;
+};
 
-// console.log(formatName('Ana')); // ✅ Sin apellido
-// console.log(formatName('Ana', 'García')); // ✅ Con apellido
+console.log(formatName('Ana')); // ✅ Sin apellido
+console.log(formatName('Ana', 'García')); // ✅ Con apellido
 
 console.log('');
 
@@ -71,12 +71,12 @@ console.log('--- PASO 4: Valores por Defecto ---');
 // IMPACTO: si multiplier no se pasa, usa 2
 
 // Descomenta las siguientes líneas:
-// const multiply = (value: number, multiplier: number = 2): number => {
-//   return value * multiplier;
-// };
+const multiply = (value: number, multiplier: number = 2): number => {
+return value * multiplier;
+};
 
-// console.log('5 * 2 =', multiply(5)); // Usa multiplier = 2 por defecto
-// console.log('5 * 3 =', multiply(5, 3)); // Usa multiplier = 3
+console.log('5 * 2 =', multiply(5)); // Usa multiplier = 2 por defecto
+console.log('5 * 3 =', multiply(5, 3)); // Usa multiplier = 3
 
 console.log('');
 
@@ -90,19 +90,19 @@ console.log('--- PASO 5: Callbacks Tipados ---');
 // IMPACTO: callback debe recibir number y retornar number
 
 // Descomenta las siguientes líneas:
-// const processNumbers = (
-//   numbers: number[],
-//   callback: (n: number) => number,
-// ): number[] => {
-//   return numbers.map(callback);
-// };
+const processNumbers = (
+numbers: number[],
+callback: (n: number) => number,
+): number[] => {
+return numbers.map(callback);
+};
 
 // QUÉ: usar processNumbers con diferentes callbacks
-// const doubled = processNumbers([1, 2, 3, 4], (n) => n * 2);
-// console.log('Duplicados:', doubled);
+const doubled = processNumbers([1, 2, 3, 4], (n) => n * 2);
+console.log('Duplicados:', doubled);
 
-// const squared = processNumbers([1, 2, 3, 4], (n) => n * n);
-// console.log('Al cuadrado:', squared);
+const squared = processNumbers([1, 2, 3, 4], (n) => n * n);
+console.log('Al cuadrado:', squared);
 
 console.log('');
 
